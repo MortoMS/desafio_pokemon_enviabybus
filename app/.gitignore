@@ -1,4 +1,1 @@
 .env
-cache/open_weather/*.json
-cache/poke/*.json
-cache/autocomplete.txt
