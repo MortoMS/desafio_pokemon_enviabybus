@@ -1,19 +1,22 @@
 # O Projeto
 
 Esse projeto tem como finalidade concluir o desafio Pokémon para desenvolvedores dá Enviabybus.
-[O desafio](https://gitlab.com/enviabybus/weather-pokemon-test/-/tree/master/developer)
+[O desafio.](https://gitlab.com/enviabybus/weather-pokemon-test/-/tree/master/developer)
 
 ## Foco do Projeto
 
 Esse projeto foi construido sem a necessidade de nenhum recurso de terceisos, 
 isso é claro sem incluir às API e a Biblioteca gráfica que ele utiliza.
 
+
 ## Dependências
 
-[PHP ^7.2](https://www.php.net)
+[PHP ^7.2](https://www.php.net) 
+
 [Materialize](https://materializecss.com)
 
 ## Configuração do projeto
+
 
 ### Baixando o Projeto
 
@@ -97,8 +100,11 @@ Para executar esse comando é necessario configurar o PHP CLI e a variável de a
 ### Notas
 
 > Ao utilizar o PHP CLI para executar o servidor de teste é necessario configurar o openssl e curl, para evitar o erro de "SSL certificate problem: unable to get local issuer certificate".
+
 > O conteudo do projeto antes da pasta app só necessário para servidores que vão utilizar o Docker.
+
 > O endereço dá aplicação deve sempre apontar para a pasta public
+
 
 ### Variável de Ambiente
 
@@ -135,6 +141,7 @@ A página de pesquisa permite a sua utilização como API retornado o resultado 
 ### Notas
 
 > Em alguns casos será necessário adicionar permição para o PHP criar e alterar arquivos na pasta cache, em app.
+
 > Nesse projeto foi adicionado uma regra extra incluindo o tipo de Pokémon psíquico, que não foi incluido no desafio.
 
 ### Author / Dev
