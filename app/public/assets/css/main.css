@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+html, body, main, section {
+    width: 100%;
+    height: 100%;
+    color: #272727;
+    padding: 0px;
+    margin: 0px;
+    background: rgb(252, 252, 252);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.section-home {
+    display: flex;
+}
+
+.section-home > div:first-child {
+    margin: auto;
+}
+
+.mt-2 {
+    margin-top: 2em!important;
+}
+
+.form {
+    padding: 2em 2em;
+}
+
+.pokemon-name {
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #272727!important;
+}
+
+.logo {
+    display: block;
+    margin: auto;
+    width: 60%;
+}
