@@ -41,7 +41,7 @@ docker compose up
 
 Para Configurar esse projeto para rotar em um servido Apache basta apontar o DocumentRoot do projeto para a pasta public, detro de app.
 
-### Nginx
+#### Nginx
 
 Para servidores Nginx basta utilizar esses arquivo de configuração.
 
