@@ -85,7 +85,7 @@ server {
 }
 ```
 
-### PHP
+#### PHP
 
 É possivel executar essa aplicação em um servidor de debug do php.
 
@@ -97,7 +97,7 @@ php -S localhost:80 -t ./app/public
 
 Para executar esse comando é necessario configurar o PHP CLI e a variável de ambiente "php".
 
-### Notas
+#### Notas
 
 > Ao utilizar o PHP CLI para executar o servidor de teste é necessario configurar o openssl e curl, para evitar o erro de "SSL certificate problem: unable to get local issuer certificate".
 
