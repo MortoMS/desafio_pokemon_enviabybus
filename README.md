@@ -5,7 +5,7 @@ Esse projeto tem como finalidade concluir o desafio Pokémon para desenvolvedore
 
 ## Foco do Projeto
 
-Esse projeto foi construido sem a necessidade de nenhum recurso de terceisos, 
+Esse projeto foi construido sem a necessidade de nenhum recurso de terceiros, 
 isso é claro sem incluir às API e a Biblioteca gráfica que ele utiliza.
 
 
