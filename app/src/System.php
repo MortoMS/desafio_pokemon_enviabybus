@@ -54,7 +54,10 @@ class System
             {
                 $value = trim(fgets($rf));
 
-                putenv($value);
+                if ((bool) preg_match("/([A-Z_]+=+(.*))/", $value))
+                {
+                    putenv($value);
+                }
             }   
 
             fclose($rf);
