@@ -3,8 +3,8 @@
 spl_autoload_register(function($class)
 {
     $class = str_replace("App\\", "", $class);
-	$class = str_replace('\\', "/", $class);
-    $file = RAIZ . "/src/" . $class . ".php";
+	$class = str_replace("\\", DIRECTORY_SEPARATOR, $class);
+    $file = RAIZ . DIRECTORY_SEPARATOR .  "src" . DIRECTORY_SEPARATOR . $class . ".php";
 
     if (file_exists($file))
     {

@@ -124,7 +124,7 @@ class OpenWeather
     {
         $cache = sha1($index);
 
-        $file = RAIZ . $this->localCache . $cache . ".json";
+        $file = System::mountAddress($this->localCache . $cache . ".json");
 
         if (file_exists($file) and filemtime($file) > time() - $this->tempCache)
         {
@@ -149,7 +149,7 @@ class OpenWeather
     {
         $cache = sha1($index);
 
-        $file = RAIZ . $this->localCache . $cache . ".json";
+        $file = System::mountAddress($this->localCache . $cache . ".json");
 
         file_put_contents($file, json_encode($data));
     }

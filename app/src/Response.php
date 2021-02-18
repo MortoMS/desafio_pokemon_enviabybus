@@ -2,6 +2,8 @@
 
 namespace App;
 
+use APP\System;
+
 class Response
 {
     /**
@@ -90,7 +92,7 @@ class Response
     {
         if (!$this->render)
         {
-            $this->view =  RAIZ . "/view/" . $file . ".view.php";
+            $this->view = System::mountAddress("/view/" .  $file . ".view.php");
             $this->data = $data;
             return $this;
         }
@@ -123,7 +125,7 @@ class Response
      */
     public static function renderComponent(string $file, array $data = [])
     {
-        $file = RAIZ . "/view/" . $file . ".view.php";
+        $file = System::mountAddress("/view/" . $file . ".view.php");
         
         ob_start();
 

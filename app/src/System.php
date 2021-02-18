@@ -14,9 +14,9 @@ class System
      * 
      * @return array
      */
-    public static function getConfig(string $file, string $directory = RAIZ . "/config/"): array
+    public static function getConfig(string $file, string $directory = 'config/'): array
     {
-        $file = $directory . $file . ".php";
+        $file = System::mountAddress($directory . $file . ".php");
  
         if (file_exists($file))
         {
@@ -42,9 +42,9 @@ class System
      * 
      * @return void
      */
-    public static function loadingFileEnv(string $directory = RAIZ, string $file = '.env')
+    public static function loadingFileEnv(string $directory = '/', string $file = '.env')
     {
-        $file = $directory . '/'. $file;
+        $file = System::mountAddress($directory . $file);
 
         if (file_exists($file))
         {
@@ -68,6 +68,21 @@ class System
         throw new \Exception(
             "O arquivo com ás variavel de ambiente não foi encontrado '" . $file . "'."
         );
+    }
+
+    /**
+     * Monta o endereço do diretorio ou arquivo para o sistema em que o projeto está rodando
+     * 
+     * @param string $address Endereço do arquivo ou diretorio
+     * @param string $index Chave usada como referencia, default '/'
+     * 
+     * @return string
+     */
+    public static function mountAddress(string $address, string $index = "/"): string
+    {
+        $address = str_replace($index, DIRECTORY_SEPARATOR, $address);
+
+        return RAIZ . DIRECTORY_SEPARATOR . $address;
     }
 }
 

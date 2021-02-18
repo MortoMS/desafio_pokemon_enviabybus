@@ -101,7 +101,7 @@ class Router
      */
     private static function validationURL(string $url): bool
     {
-        $url_i = explode("?", $_SERVER['REQUEST_URI'])[0];
+        $url_i = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
         if ($url_i === $url)
         {

@@ -2,14 +2,16 @@
 
 namespace App\Services;
 
+use APP\System;
+
 class AutoComplete
 {   
     /**
      * Local e arquivo do cache de autocomplete
      * 
-     * @var string $localCache
+     * @var string $fileCache
      */
-    private static $localCache = RAIZ . "/cache/autocomplete.txt";
+    private static $fileCache =  "/cache/autocomplete.txt";
 
     /**
      * Carrega uma valor no arquivo de cache do auto complete
@@ -22,7 +24,9 @@ class AutoComplete
 
         if (array_search($value, $data) === false)
         {
-            file_put_contents(self::$localCache, $value . ",", FILE_APPEND);
+            $file = System::mountAddress(self::$fileCache);
+
+            file_put_contents($file, $value . ",", FILE_APPEND);
         }
     }
 
@@ -33,9 +37,12 @@ class AutoComplete
      */
     public static function getValue(): array
     {
-        if (file_exists(self::$localCache))
+
+        $file = System::mountAddress(self::$fileCache);
+
+        if (file_exists($file))
         {
-            $data = file_get_contents(self::$localCache);
+            $data = file_get_contents($file);
             $data = explode(",", $data);
             array_pop($data);
 
@@ -52,16 +59,22 @@ class AutoComplete
      */
     public static function clearCache()
     {
-        file_put_contents(self::$localCache, "");
+        $file = System::mountAddress(self::$fileCache);
+
+        file_put_contents($file, "");
     }
 
     /**
      * Função para carregar uma lista para o cache do auto complete
      * 
+     * @param array $values Valores do autocomplete
+     * 
      * @return void
      */
     public static function setValueAll(array $values)
     {
-        file_put_contents(self::$localCache, $values);
+        $file = System::mountAddress(self::$fileCache);
+
+        file_put_contents($file, explode(",", $values));
     }
 }

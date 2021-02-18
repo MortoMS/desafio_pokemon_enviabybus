@@ -4,12 +4,13 @@ use App\System;
 use App\Response;
 
 define("RAIZ", __DIR__);
+define("DIR", DIRECTORY_SEPARATOR);
 
 try 
 {
     session_start();
     
-    require_once RAIZ . "/autoloading.php";
+    require_once RAIZ . DIR . "autoloading.php";
     
     date_default_timezone_set("America/Sao_Paulo");
 
@@ -17,7 +18,7 @@ try
 
     define("BASE", getenv("APP_URL"));
 
-    require_once RAIZ . "/router.php";
+    require_once System::mountAddress("router.php");
 }
 catch(Exception $e)
 {
