@@ -11,7 +11,7 @@ Router::request(
 
 Router::request(
     ["GET", "POST"], 
-    BASE ."search", 
+    BASE . "search", 
     [App\Controllers\Search::class => "search"]
 );
 

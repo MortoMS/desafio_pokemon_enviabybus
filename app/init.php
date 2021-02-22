@@ -4,13 +4,12 @@ use App\System;
 use App\Response;
 
 define("RAIZ", __DIR__);
-define("DIR", DIRECTORY_SEPARATOR);
 
 try 
 {
     session_start();
     
-    require_once RAIZ . DIR . "autoloading.php";
+    require_once RAIZ . DIRECTORY_SEPARATOR . "autoloading.php";
     
     date_default_timezone_set("America/Sao_Paulo");
 
