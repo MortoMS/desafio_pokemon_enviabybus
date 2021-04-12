@@ -2,7 +2,7 @@
 
 namespace App;
 
-use APP\System;
+use App\System;
 
 class Response
 {

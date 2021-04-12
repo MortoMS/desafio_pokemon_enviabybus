@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use APP\System;
+use App\System;
 
 class AutoComplete
 {   
