@@ -55,7 +55,7 @@ server {
     server_name  localhost;
 
 	root /var/www/app/public; 
-    // local de uma aplicação padrão em servidores linux, necessário ajuste para cara maquina
+    // local de uma aplicação padrão em servidores linux, necessário ajuste para cada servidor
 
     add_header X-Frame-Options "SAMEORIGIN";
     add_header X-XSS-Protection "1; mode=block";
@@ -74,7 +74,7 @@ server {
 
     error_page 404 /index.php;
 
-    // Essa configuração de php depende de como você configurou o seu sistema
+    // Essa configuração de php depende de como você configurou o seu servidor
     location ~ \.php$ {
         fastcgi_pass   php:9000;
         fastcgi_param  SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
