@@ -8,8 +8,10 @@ class Home
 {
     /**
      * @Router("/")
+     *
+     * @return void
      */
-    function home(Response $response)
+    public function home(Response $response)
     {
         $response->view("home")->run();
     }

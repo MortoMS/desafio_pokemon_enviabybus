@@ -3,8 +3,6 @@
 Esse projeto tem como finalidade concluir o desafio Pokémon para desenvolvedores dá Enviabybus.
 [O desafio.](https://gitlab.com/enviabybus/weather-pokemon-test/-/tree/master/developer).
 
-[Uma versão de teste publicado no heroku.](https://young-gorge-54658.herokuapp.com)
-
 ## Foco do Projeto
 
 Esse projeto foi construido sem a necessidade de nenhum recurso de terceiros, 

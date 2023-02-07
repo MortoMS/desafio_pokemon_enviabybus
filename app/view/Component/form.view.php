@@ -1,5 +1,5 @@
 <form 
-    action="<?php echo htmlspecialchars(BASE . "search");?>" 
+    action="<?php echo htmlspecialchars($base . "search");?>" 
     class="card-body" 
     method="GET"
 >
@@ -26,7 +26,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', async function()
     {
-        let data = await fetch("<?=BASE?>autocomplete", {method: "POST"})
+        let data = await fetch("<?=$base?>autocomplete", {method: "POST"})
         .then(async (res) => res.json())
         .then(async (data) => {
             let res = {};

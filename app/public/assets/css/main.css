@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-html, body, main, section {
+html, body, main {
     width: 100%;
-    height: 100%;
     color: #272727;
+    height: 100%;
     padding: 0px;
     margin: 0px;
     background: rgb(252, 252, 252);
     font-family: 'Open Sans', sans-serif;
+}
+
+section {
+    min-height: calc(100% - 30px);
 }
 
 .section-home {
@@ -36,4 +40,10 @@ html, body, main, section {
     display: block;
     margin: auto;
     width: 60%;
+}
+
+footer {
+    text-align: center;
+    height: 30px;
+    background-color: #eee;
 }
