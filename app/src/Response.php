@@ -134,6 +134,7 @@ class Response
      */
     public static function renderComponent(string $file, array $data = [])
     {
+        $base = System::getEnv('APP_URL');
         $file = System::mountAddress("/view/" . $file . ".view.php");
 
         ob_start();
